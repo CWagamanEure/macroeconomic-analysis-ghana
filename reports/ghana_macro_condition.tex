@@ -12,7 +12,7 @@
 \begin{document}
 
 \title{Money, Credit, and Macroeconomic Analysis of Ghana}
-\author{Your Name}
+\author{Cory Wagaman-Eure}
 \date{\today}                    
 \maketitle
 
@@ -68,7 +68,7 @@ When real rates become deeply negative, inflation can be entrenched by expansion
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{../figures/analysis/ChangePolicyRateVsLaggedInflationScatter.png}
-  \caption{Change in policy rate vs lagged inflation}
+  \caption{Scatter - change in policy rate vs lagged inflation}
   \label{fig:policyvslaggedinflation}
 \end{figure}
 
@@ -80,8 +80,95 @@ policy follows inflation but not aggressively enough to keep real rates positive
 
 \subsection{Money Growth and Inflation}
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/MoneyGrowthVsInflationTimeSeries.png}
+  \caption{Time series - money growth and inflation headline}
+  \label{fig:moneygrowthandinflation}
+\end{figure}
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/MoneyGrowthVsInflationScatter.png}
+  \caption{Scatter - money growth vs inflation headline}
+  \label{fig:moneygrowthvsinflation}
+\end{figure}
 
+When running a regression on inflation headline and year-over-year money supply, we received a slope of 0.30, p-value of 0.0004 and $R^2$ of 0.08. This indicates that a one percentage point increase in money supply results in ~0.3 percentage point increase in
+inflation. Only ~8 percent of inflation variation can be exlained by money supply growth.
+
+Clearly, there is a monetary component to Ghanian inflation, whereas persistent high M2+ growth is associated with higher inflation. Other forces also seem to dominate inflation variance. When running ADF, both inflation and M2+ growth look non-stationary, 
+indicating some co-movement and not stable mean-reversion.
+
+\section{Credit, Growth, and Labour Market}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/RealCreditGrowthVsRealActivity.png}
+  \caption{Time series - private credit and real growth}
+  \label{fig:privatecreditandrealgrowth}
+\end{figure}
+
+As you can see, real private credit growth is positively correlated with composite economic activty index. Credit and activity seem to move together in cycles. Its plausible that there exists some two way cauality. In terms of policy, aggressive tightening that
+crushes credit growth is likely to slow real activity, although effect size is moderate.
+
+\section{NPLs and Credit Booms} 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/CreditGrowthVsNPLratioScatter.png}
+  \caption{Scatter - npl ratio vs private credit yoy}
+  \label{fig:nplvscredit}
+\end{figure}
+
+There seems to be a negative correlation between npl ratio and credit growth. Periods of fast credit growth coincide with low measured NPLs. Intuitively, this makes sense as upswings in credit booms result in low number of defaults, and banks
+are more willing to lend aggressively. When growth slows, NPLs jump even as new credit growth collapses. For Ghana specifically, this suggests that it is even more important to monitor credit booms to protect financial stability.
+
+\section{FX, Reserves and IMF Programs}
+
+\subsection{Reserves and Exchange Rate Depreciation}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/FXvsReservesDualAxis.png}
+  \caption{Time Series - dual axis mid price and net reserves}
+  \label{fig:midandreserves}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/FXDepreciationVsReserveChangesScatter.png}
+  \caption{Scatter - fx depreciation vs reserve changes}
+  \label{fig:fxvsreserve}
+\end{figure}
+
+This regression resulted in a slope of -6, p < 0.0001, and $R^2$ of 0.36. This indicates that a one unit improvement in reserves is associated with ~6pp lower annual depreciation of currency.
+
+When Ghana runs down reserves, the currency tends to depreciate sharply over the subsequent year. Reserves seem to be acting as a buffer. Once they are exhausted or falling rapidly, FX pressure hits the currency.
+In regards to policy, this shows that defending currency by burning reserves is not sustainable.
+
+\subsection{IMF Programs and FX Crisis}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/FXDepreciationAndIMFPrograms.png}
+  \caption{Time Series - fx depreciation with IMF program start dates}
+  \label{fig:fxandimf}
+\end{figure}
+
+IMF arrangements in Ghana tend to start during or just after major FX crises, not in calm times. Visually, many red lines sit at or just after peaks in 12-month depreciation. This supports the narrative
+that IMF programs are a backstop when external financing dries up and reserves are low.
+
+\section{Policy Recommendations}
+
+\subsection{Strengthen the Monetary Policy Framework}
+
+Real policy rates turn sharply negative during inflation spikes. Reaction function is also too weak and explains only ~13 percent of rate changes. Money growth is also positively correlated to inflation. These findings
+suggest that the best response may be to commit to keeping ex-ante real policy rates positive when inflation is above target. 
+
+\subsection{Manage Credit and Financial Stability Together}
+
+Real credit growth is linked to economic activity, but also to cycles in NPLs.
 
 
 \section{Conclusion}
