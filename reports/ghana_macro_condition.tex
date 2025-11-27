@@ -50,6 +50,38 @@ Tools consisted of feature correlation matrices, OLS regressions with a single k
 
 \section{Monetary Policy, Inflation, and Money Growth}
 
+\subsection{Inflation vs Policy Rate}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/inflationPolicyRateRealPolicyRate.png}
+  \caption{Time series - headline inflation, policy rate, real policy rate.}
+  \label{fig:inflationvspolicy}
+\end{figure}
+
+To start off the analysis, we compared inflation with policy and real policy rate. As you can see in the visual, inflation has two major peaks (~20 around mid-2010s and 50 in 2022-23).
+The policy rate moves with inflation but lags it, while the real policy rate naturally turns sharply negative in high-inflation episodes. Clearly, monetary policy often falls behind the curve.
+When real rates become deeply negative, inflation can be entrenched by expansionary policy.
+
+\subsection{Simple Policy Reaction Function}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../figures/analysis/ChangePolicyRateVsLaggedInflationScatter.png}
+  \caption{Change in policy rate vs lagged inflation}
+  \label{fig:policyvslaggedinflation}
+\end{figure}
+
+When running a regression on change in policy rate and lagged inflation we found a slope of 0.04, indicating that a one percentage point increase in last months inflation results in a 0.04 percentage point change in policy rate this month.
+The p-value of this regression was <0.001, indicating statistical significance, with a $R^2$ of around 0.13 indicating only ~13 percent of policy moves are explained by lagged inflation.
+
+This can be interpreted as the fact that the BoG does not systematically respond to inflation, but rather responds modestly. Large policy moves likely reflect other factors such as FX pressure. This matches the first visual, which indicated that 
+policy follows inflation but not aggressively enough to keep real rates positive.
+
+\subsection{Money Growth and Inflation}
+
+
+
 
 
 \section{Conclusion}
