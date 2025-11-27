@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath, amssymb}    
+\usepackage{graphicx}            
+\usepackage{booktabs}            
+\usepackage{setspace}            
+\usepackage{natbib}             
+
+\onehalfspacing                 
+
+\begin{document}
+
+\title{Money, Credit, and Macroeconomic Analysis of Ghana}
+\author{Your Name}
+\date{\today}                    
+\maketitle
+
+\begin{abstract}
+This paper studies the relationships between money growth, inflation,
+credit, and macro-financial variables in Ghana.
+\end{abstract}
+
+\section{Introduction}
+
+Historically, Ghana has struggled with repeated bouts of high inflation and currency depreciation (especially mid-2010s and 2022-23), which have major 
+implications for the economic lives of its citizens. Ghana has also faced rising public debt and pressures on FX reserves, which
+have been supplemented with IMF program disbursements over the last ~50 years in attempts to calm the issue. 
+
+The goal of this paper is to analyze Ghana's monthly macro and financial data in order to study the relationships between monetary policy, money/credit growth, FX pressures, and IMF 
+programs. This will allow us to better understand how the Bank of Ghana (BoG) systematically reacts to inflation, how strongly money and credit growth are linked to inflation and activity, and
+also how reserves adn FX depreciation behave around IMF programs. 
+
+Before analyzing the data, we can infer based off other instances of macroeconomic conditions that the BoG's policy will react to inflation in an imperfect mannor. We
+can also infer that money and credit growth will not be fully indicative of inflation or growth. Lastly, we can infer that major FX crises, such as big 12-month depreciations, result
+in (or line up closely with) IMF arrangements.
+
+\section{Data and Methodology}
+
+Initial data sources for this research included the BoG's macro sheet, which included features such as broad money (M2+), private credit, interest rates, CIEA growth, reserves, and NPLs.
+To access GDP and unemployment data, we sourced quarterly and annual series, which we transformed to yoy and matched to monthly. FX data was taken from interbank USD/GHS daily, which was 
+engineered into monthly averages, which was then used to build a 12-month depreciation rate series. IMF arrangements were pulled using their start dates and agreed amounts.
+
+In terms of feature engineering, we built year-on-year averages to build the M2+ year-over-year, private credit year-over-year, real private credit year-over-year, and gdp (non-oil) year-over-year.
+We also built real policy rate, real interbank rate, and real lending rate by subtracting the inflation rate from the nominal. In regards to FX, we calculated the twelve-month percent change in USD/GHS.
+A twelve-month net change in reserves was also engineered, along with lags in inflation, and real credit.
+
+Tools consisted of feature correlation matrices, OLS regressions with a single key regressor. We also used ADF tests to check for stationarity and avoid using non-stationary features.
+
+
+\section{Monetary Policy, Inflation, and Money Growth}
+
+
+
+\section{Conclusion}
+
+\bibliographystyle{apalike}      
+\bibliography{references}        
+
+\end{document}
+
