@@ -22,22 +22,25 @@
 
 This paper looks at how Ghana's macroeconomic conditions have evolved since the mid-2000s, with a focus on inflation, credit growth, and pressure on the exchange rate. It will also cover the current macroeconomic state of Ghana and policy recomendations. 
 
-Ghana is emerging from its 2022-23 crisis of high inflation, collapsing cedi, and debt distress, but the recovery is still incomplete. Under the IMF's Extended Credit Facility, the third review reports that growth is recovering, inflation has declined,
-and fiscal and external balances have improved as debt restructuring advances and reforms stay on track (\citep{imf_ghana_ecf_2024}. The World Bank's 9th Ghana Economic Update shows real GDP growth of about 5.7 percent in 2024 and continuing strong into 2025 \citep{worldbank_ghana_update9_2025}. Inflation has also
-fallen pretty dramatically, having been above 50 percent during the crisis and being around 8 percent in October 2025. This has allowed for the Bank of Ghana to cut rates from nearly 30 percent to 21 percent while still keeping real rates positive \citep{bog_mpc_2024,reuters_rate_cut_2025a}.
-Banking sector indicators have also improved, but NPLs are still high and private  credit growth is weak. The crisis can be interpreted as adverse supply shocks and loose monetary conditions shifting the SRAS left and AD right, while 
-fiscal consolidation and tight money shifts the AD back towards potential in an IS-LM framework.
-
-The main questions I ask are: How closely does Ghana's inflation track money growth, and how aggressively does the Bank of Ghana (BoG) move its policy rate in response to inflation? By answering this question, we can gage better responses for improvement in 
+The main questions I ask are: How closely does Ghana's inflation track money growth, and how aggressively does the Bank of Ghana (BoG) move its policy rate in response to inflation? By answering this question, we can gauge better responses for improvement in 
 economic conditions. We also ask how strongly growth in private credit is linked to real economic activity and to bank health. Last, we ask how exchange rate depreciation and international reserves behave around IMF programs.
 
 To answer these questions, I put together monthly data from the BoG on inflation, policy and lending rates, monetary aggregates, private sector credit, the Composite Index of Economic Activity, and banking sector indicators. I combine these with
 interbank exchange rate data and a list of Ghana's IMF arrangements. I then construct year-on-year growth rates and run OLS regressions to determine patterns in Ghana's macro history.
 
+\subsection{Current Conditions}
+
+Ghana is emerging from its 2022-23 crisis of high inflation, collapsing cedi, and debt distress, but the recovery is still incomplete. Under the IMF's Extended Credit Facility, the third review reports that growth is recovering, inflation has declined,
+and fiscal and external balances have improved as debt restructuring advances and reforms stay on track \citep{imf_ghana_ecf_2024}. The World Bank's 9th Ghana Economic Update shows real GDP growth of about 5.7 percent in 2024 and continuing strong into 2025 \citep{worldbank_ghana_update9_2025}. Inflation has also
+fallen dramatically, having been above 50 percent during the crisis and being around 8 percent in October 2025. This has allowed for the Bank of Ghana to cut rates from nearly 30 percent to 21 percent while still keeping real rates positive \citep{bog_mpc_2024,reuters_rate_cut_2025a}.
+Banking sector indicators have also improved, but NPLs are still high and private  credit growth is weak. The crisis can be interpreted as adverse supply shocks and loose monetary conditions shifting the SRAS left and AD right, while 
+fiscal consolidation and tight money shifts the AD back towards potential in an IS-LM framework.
+
+
 \section{Data and Methodology}
 
-The main data source for this project is the BoG's published macroeconomic time series. From there I take monthly series for narrow money (M1), broad money (M2), the policy rate, interbank and lending rates, the Ghana Reference rate, headline and component inflation,
-private sector credit, the CIEA real index and its growth rate, the bankng sector non-performing loan (NPL ratio), and the capital adequacy ratio.. I also use BoG's series on export, imports, trade balance, gross and net reserves, and the interbank exchange rate
+The main data source for this project is the BoG's published macroeconomic time series. The sample runs from January 2007 to October 2024. From there I take monthly series for narrow money (M1), broad money (M2), the policy rate, interbank and lending rates, the Ghana Reference rate, headline and component inflation,
+private sector credit, the CIEA real index and its growth rate, the banking sector non-performing loan (NPL ratio), and the capital adequacy ratio.. I also use BoG's series on export, imports, trade balance, gross and net reserves, and the interbank exchange rate
 of their currency with USD. I also collect dates for the Ghana IMF arrangements from the IMF lending database.
 
 All series are merged into monthly data set with a DateTime index. For most nominal stock variables such as M2+ and private credit I work with year-on-year percentage changes. I also adjust private credit year-over-year for inflation to get real credit.
@@ -62,7 +65,7 @@ and compare the averge depreciation in a window around IMF programs.
 Figure 1 shows the headline inflation together with the BoGs policy rate and ex-post real policy from 2007 to 2024. Three big inflation periods stand out being around 2008-09, mid-2014 to 2016 and the recent covid spike around 2022. In each of these
 instances, the policy rate eventually moves up, but the real policy rate becomes sharply negative when inflation jumps faster than the nominal rate. 
 
-This suggests that Ghanaian monetary policy is often behind the curve in the short run. In an AD-AS or IS-LM model, high inflation with negative real rates correspond with aggregate demand being above potential output. Demand is being supported even while prices
+This suggests that Ghanaian monetary policy is often behind the curve in the short run. In an AD-AS or IS-LM model, high inflation with negative real rates corresponds with aggregate demand being above potential output. Demand is being supported even while prices
 are rising rapidly. Only once the policy rate catches and the real rate return toward zero does the inflation fall back.
 
 \begin{figure}[htbp]
@@ -79,7 +82,7 @@ are rising rapidly. Only once the policy rate catches and the real rate return t
   \label{fig:moneygrowthvsinflation}
 \end{figure}
 
-To link this to money growth, Figure 2 and 3 show headline inflation against broad money year-on-year growth. In Figure 2, the two series are not perfectly aligned, but they do tend to spike together in the three main crisis periods. 
+To link this to money growth, Figure 2 and figure 3 show headline inflation against broad money year-on-year growth. In Figure 2, the two series are not perfectly aligned, but they do tend to spike together in the three main crisis periods. 
 Running an OLS regression on inflation on M2+ growth gives a positive and statistically significant coefficient of about 0.30, indicating that, on average, a 10-percentage point increase in money growth is associated with a roughly 3-percentage point increase
 in inflation. However, the R-Squared is only about 0.08 which means that money growth by itself explains less than 10 percent of the month-to-month variation in inflation. This matches the idea that, in the short run, many other factors matter for inflation such 
 as supply shocks, fiscal policy, and expectations.
@@ -96,14 +99,14 @@ I also look at how the central bank reacts to inflation by regressing monthly ch
   \label{fig:privatecreditandrealgrowth}
 \end{figure}
 
-Figure 4 shows real private credit growth with the BoG's CIEA real growth rate. Real credit growth is very volatile, being super high in the late 2000s and slowing sharply in 2012, collapsing again in 2017 and 2020. The CIEA growth rate is much
+Figure 4 shows real private credit growth with the BoG's CIEA real growth rate. Real credit growth is very volatile, being high in the late 2000s and slowing sharply in 2012, collapsing again in 2017 and 2020. The CIEA growth rate is much
 smoother but clearly weakens around the same time periods. Periods of strong credit expansion tend to coincide with stronger real activity.
 
 A regression of CIEA growth on real credit growth gives a coefficient of about 0.40 that is statistically significant, with an R-squared around 0.19. This means that when real private credit growth is 10 pp higher the CIEA growth rate is on average 4 p higher
 the same year. This relationship is not great but strong enough to show the importance of bank lending in Ghana's business cycle.
 
 When I shift the real credit growth three months back and regress CIEA growth on the lagged credit, the coefficient stays poitive but smaller and the R-squared drops to about 0.06. This suggests that credit booms may lead real activity with slight lag. Using IS-LM,
-this matches the idea that more bank lending shifts the IS crive to the right and temporarily increases output and incomes.
+this matches the idea that more bank lending shifts the IS curve to the right and temporarily increases output and incomes.
 
 \begin{figure}[htbp]
   \centering
@@ -137,7 +140,7 @@ the early 2010s but fall again around the time of the big depreciations. This sh
 
 The scatter plot of the 12-month FX depreciation against the 12-month change in net reserves makes this relationship much more systematic. The regression slope is strongly negative and highly significant with an R-squared of about 0.36. Years in which 
 net reserves increase tend to have much lower exchange rate depreciation, while years when reserves were run down tend to coincide with big loss in cedi value relative to USD. This is exactly what is to be expected from an AD-AS model. Using reserves to
-smooth the exchange rate can temporarily contain a depreciation, but when reserves are falling super quickly it is usually a sign that currency will end up weakening.
+smooth the exchange rate can temporarily contain a depreciation, but when reserves are falling quickly it is usually a sign that currency will end up weakening.
 
 \begin{figure}[htbp]
   \centering
@@ -151,7 +154,7 @@ programs, although we are limited to three data points. When I compare average 1
 than normal times (about 16 percent). This may indicate that Ghana tends to turn to the IMF only once a balance-of-payment crisis is already fairly severe, instead of pre-emptively.
 
 Fiscal and monetary expansion, along with external shocks, push the demand above potential and widen external imbalances, putting more pressure on the currency. When reserves and investor confidence are low, the country ends up at the IMF for financing and policy
-help. The IMF program is a sort of point where policy hgas to shift back toward tigher fiscal and monetary stances to stabilize the currency and inflation.
+help. The IMF program is a sort of point where policy has to shift back toward tigher fiscal and monetary stances to stabilize the currency and inflation.
 
 \section{Policy Recommendations}
 
@@ -173,8 +176,8 @@ and support sectors with many jobs to help shift the Phillips curve inward so th
 
 \section{Conclusion}
 
-This project uses time-series and scatterplot evidence to look at how monetary policy, credit conditions, and external pressures have interacted iwth Ghana since mid-2000s. I find that broad money growth is positively associated
-with inflation, but only explains a small share of its short-run movements. The Bank of Ghana does raise the policy rate when inflation rises, but the respose is not strong enough to prevent periods of very negative real interest rates and high inflation.
+This project uses time-series and scatterplot evidence to look at how monetary policy, credit conditions, and external pressures have interacted with Ghana since mid-2000s. I find that broad money growth is positively associated
+with inflation, but only explains a small share of its short-run movements. The Bank of Ghana does raise the policy rate when inflation rises, but the response is not strong enough to prevent periods of very negative real interest rates and high inflation.
 Real private credit growth is positively correlated to real economic activity, and credit slowdowns coincide with periods of financial stress when NPL ratios are too high. On the outside, exchange rate depreciation is closely linked to changes in international
 reserves, and large depreciations tend to happen when Ghana enters new IMF arrangements.
 
