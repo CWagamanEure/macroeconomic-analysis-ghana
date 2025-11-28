@@ -40,7 +40,7 @@ fiscal consolidation and tight money shifts the AD back towards potential in an 
 \section{Data and Methodology}
 
 The main data source for this project is the BoG's published macroeconomic time series. The sample runs from January 2007 to October 2024. From there I take monthly series for narrow money (M1), broad money (M2), the policy rate, interbank and lending rates, the Ghana Reference rate, headline and component inflation,
-private sector credit, the CIEA real index and its growth rate, the banking sector non-performing loan (NPL ratio), and the capital adequacy ratio.. I also use BoG's series on export, imports, trade balance, gross and net reserves, and the interbank exchange rate
+private sector credit, the CIEA real index and its growth rate, the banking sector non-performing loan (NPL ratio), and the capital adequacy ratio. I also use BoG's series on export, imports, trade balance, gross and net reserves, and the interbank exchange rate
 of their currency with USD. I also collect dates for the Ghana IMF arrangements from the IMF lending database.
 
 All series are merged into monthly data set with a DateTime index. For most nominal stock variables such as M2+ and private credit I work with year-on-year percentage changes. I also adjust private credit year-over-year for inflation to get real credit.
@@ -48,7 +48,7 @@ For the policy rate and other interest rates I compute the real versions by subt
 I compute the 12-month change in net reserves.
 
 First I make time-series and scatter plots to see whether the variables move together. Second, I calculate correlations and run a few on-variable OLS regressions. For IMF episodes, I mark the start dates of each on top of the exchange rate depreciation series
-and compare the averge depreciation in a window around IMF programs.
+and compare the average depreciation in a window around IMF programs.
 
 
 \section{Results}
@@ -62,7 +62,7 @@ and compare the averge depreciation in a window around IMF programs.
   \label{fig:inflationvspolicy}
 \end{figure}
 
-Figure 1 shows the headline inflation together with the BoGs policy rate and ex-post real policy from 2007 to 2024. Three big inflation periods stand out being around 2008-09, mid-2014 to 2016 and the recent covid spike around 2022. In each of these
+Figure 1 shows the headline inflation together with the BoG's policy rate and ex-post real policy from 2007 to 2024. Three big inflation periods stand out being around 2008-09, mid-2014 to 2016 and the recent covid spike around 2022. In each of these
 instances, the policy rate eventually moves up, but the real policy rate becomes sharply negative when inflation jumps faster than the nominal rate. 
 
 This suggests that Ghanaian monetary policy is often behind the curve in the short run. In an AD-AS or IS-LM model, high inflation with negative real rates corresponds with aggregate demand being above potential output. Demand is being supported even while prices
